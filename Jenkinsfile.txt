@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/yourusername/jenkins-etl-pipeline.git'
+                git 'https://github.com/Pragati01/Jenkins_CI-CD_Pipeline.git'
             }
         }
         stage('Install Dependencies') {
