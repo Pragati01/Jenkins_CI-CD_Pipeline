@@ -5,6 +5,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'python3 -m pip install --upgrade pip'
+                sh 'python3 -m pip install --only-binary :all: psycopg2-binary'
                 sh 'python3 -m pip install -r requirements.txt'
             }
         }
