@@ -2,11 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/Pragati01/Jenkins_CI-CD_Pipeline.git'
-            }
-        }
+        
         stage('Install Dependencies') {
             steps {
                 sh 'pip install -r requirements.txt'
