@@ -16,7 +16,9 @@ df.columns = [col.strip().replace(" ", "_").lower() for col in df.columns]  # Cl
 # Secure DB credentials from environment variables
 db_user = os.environ.get("DB_USER")
 db_pass = os.environ.get("DB_PASS")
-db_host = os.environ.get("DB_HOST")
+#db_host = os.environ.get("DB_HOST")
+
+db_host="ep-floral-rice-a8rn0ap1-pooler.eastus2.azure.neon.tech"
 db_port = os.environ.get("DB_PORT", "5432")
 db_name = os.environ.get("DB_NAME")
 
