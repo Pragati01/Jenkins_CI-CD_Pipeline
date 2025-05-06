@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'python3 -m pip install --upgrade pip'
+                sh 'python3 -m pip install -r requirements.txt'
             }
         }
         stage('Run ETL Script') {
             steps {
-                sh 'python etl/titanic_csv_to_postgres.py'
+                sh 'python3 etl/titanic_csv_to_postgres.py'
             }
         }
     }
